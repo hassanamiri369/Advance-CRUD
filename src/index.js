@@ -1,17 +1,54 @@
-import React from 'react';
+import React , {useContext , useReducer} from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import IndexCheckBox from './CheckBoxComponent/IndexCheckBox';
 
+
+
+
+import TodosContext from './Components/Context';
+import { Reducer } from './Components/Reducer';
+import TodoList from './Components/TodoList';
+
+
+
+const App = ()=>{
+  const initState = useContext(TodosContext)
+
+  const [state , dispatch] = useReducer(Reducer ,initState , ()=> {
+      
+  let todoList = localStorage.getItem("todoList")
+
+  if(todoList){
+    return JSON.parse(localStorage.getItem("todoList"))
+  }else{
+    return []
+  }
+  } )
+
+
+  // setData localStorage
+  React.useEffect(()=>{
+    localStorage.setItem("todoList" , JSON.stringify(state))
+  } ,[state])
+  
+
+
+  return(
+    <TodosContext.Provider value={{state, dispatch}}>
+        <TodoList/>
+
+        {/* <IndexCheckBox/> */}
+      </TodosContext.Provider>
+  )
+}
 ReactDOM.render(
-  <React.StrictMode>
+  
+
     <App />
-  </React.StrictMode>,
+
+  
+  ,
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+

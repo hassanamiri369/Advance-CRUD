@@ -1,0 +1,134 @@
+
+.parent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+h1{
+    font-size: 24px;
+    font-weight: bolder;
+}
+.active {
+    color : black;
+    cursor : pointer;
+}
+
+.unactive {
+    color: red;
+    cursor: pointer;
+    text-decoration: line-through;
+    
+}
+
+.divToggle{
+    /* background-color: red; */
+    padding: 10px;
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkbox{
+    border: 1px solid blue;
+    background-color: pink;
+}
+
+button{
+    border: 1px solid gray;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+
+input{
+    border: 1px solid gray;
+}
+
+.addButton{
+    background-color: rgb(21, 255, 0);
+
+}
+
+.addInput{
+    border-radius: 5px;
+    padding: 5px;
+    width: 300px;
+}
+.addInput:focus{
+    border : 2px solid rgb(18, 179, 53);
+    outline: none;
+}
+
+.container{
+    /* margin-top: 30px; */
+    width: 600px;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    border-radius: 10px;
+}
+
+.container li{
+    /* background-color: red; */
+    width: 450px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container li button{
+    padding: 5px ;
+}
+
+.container li button:first-child{
+    background-color: yellow;
+}
+
+.container li button:last-child{
+    background-color: red;
+    color: white;
+}
+
+.doneTodo{
+    /* background-color: aqua; */
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    padding: 7px;
+    background-color: black;
+}
+
+
+
+.deleteAll{
+    background-color: rgb(107, 18, 209);
+    color:  white;
+}
+.searchTodo-deleteAllTodo{
+    /* background-color: blue; */
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+
+}
+.searchInput{
+    /* background-color: wheat; */
+    border-radius: 4px;
+    padding: 3px;
+}
+
+.searchButton{
+    background-color: black;
+    color: white;
+}
