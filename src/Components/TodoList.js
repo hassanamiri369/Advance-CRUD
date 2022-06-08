@@ -4,13 +4,7 @@ import TodosContext from './Context'
 import TodoForm from './TodoForm';
 import "./TodoList.css";
 
-// checkbox ==> text-decoration / checkbox button
-// design
-// search bar 
-// localStorage
-// delete all todo button
-//  نشون دادن لست اون هایی که تودو شون انجام شده و در کل جند تا تو دو داریم 
-// ادیت کردن چند تا اینپوت 
+
 
 const TodoList = () => {
 
