@@ -16,10 +16,10 @@ const TodoForm = () => {
   }, [])
 
 
-  // الان اگر رو دکمه ی ادیت بزنیم اطلعات میره توی سرچ بار اینپوتمون 
+ 
   useEffect(()=> {
-    if(currentTodo.text){     // یعنی اگر داخل اون کارنت تودو ابجکتی بود بیا تکستش رو وارد اینپوت کن  
-      setText(currentTodo.text)  // با اپدیت شدن استیت صفحه ام ری لود میشه و هر دفعه میاد داخل این ابجکت رو برسی میکنه 
+    if(currentTodo.text){     
+      setText(currentTodo.text)  
     }else{
       setText("")
     }
@@ -29,11 +29,11 @@ const TodoForm = () => {
   const handleSubmit = (e)=>{
     e.preventDefault()
 
-    // edit  ====> update     یعنی اگر تیو کارنت تکستی وجود داشت ما در حال اپدبت کردن هستیم 
+    // edit  ====> update    
     if(currentTodo.text){
       dispatch({type : "updateTodo" , payload : text})
     }else{
-                                  // در غیر این صورت در حال اد کردن هستیم 
+                             
       dispatch({type : "addTodo" , payload : text})
     }
     setText("")
